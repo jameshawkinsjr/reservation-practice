@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
-<body>
+<body class="flex-column">
     <div class="container flex-column">
         <h1>Find your table for any occasion</h1>
         <div class="inputs">
@@ -26,7 +26,20 @@
             <input id="dateInput" type="date">
             <input id="timeInput"type="time">
         </div>
-            <button type="submit">Let's Go</button>
+            <button class="reservation-button" type="submit" onclick="addDropdown()">Let's Go</button>
+            <div id="dropdown" class="hidden">
+                    <button class="reservation-times" type="submit" onclick="signupForm()">5:00 PM</button>
+                    <button class="reservation-times" type="submit" onclick="signupForm()">5:30 PM</button>
+                    <button class="reservation-times" type="submit" onclick="signupForm()">6:00 PM</button>
+                    <button class="reservation-times" type="submit" onclick="signupForm()">6:30 PM</button>
+                    <button class="reservation-times" type="submit" onclick="signupForm()">7:00 PM</button>
+            </div>
+            <div id="signup-form" class="flex-column hidden">
+                    <div class="signup-form-input">Name: <input type="text"></div>
+                    <div class="signup-form-input">Email: <input type="text"></div>
+                    <div class="signup-form-input">Password: <input type="password"></div>
+                    <button class="signup-form-button" type="submit">Make Reservation</button>
+            </div>
     </div>
     
 </body>
